@@ -1089,3 +1089,6 @@ ol, ul {
     --tw-text-opacity: 1;
     color: rgb(121 121 121/var(--tw-text-opacity));
 }
+.wrapper-footer .column{
+    width: 292px;
+}
