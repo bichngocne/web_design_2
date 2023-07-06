@@ -119,6 +119,18 @@ var x = setInterval(function () {
 }, 1000);
 document.addEventListener("DOMContentLoaded", () => {
   navCate();
+  const inputEmail = document.querySelector(".input-email");
+  const iconEmail = document.querySelector(".icon-email");
+
+  inputEmail.addEventListener("focus", () => {
+    inputEmail.classList.add("active");
+    iconEmail.classList.add("active");
+  });
+
+  inputEmail.addEventListener("blur", () => {
+    inputEmail.classList.remove("active");
+    iconEmail.classList.remove("active");
+  });
 });
 
 function navCate() {
