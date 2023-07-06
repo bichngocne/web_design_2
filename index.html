@@ -33,16 +33,18 @@
                             <div class="select-wrapper align-items-center d-flex">
                                 <div class="select-box">
                                     <img src="./public/images/country-logo-16x16.png" alt="" width="15" class="pb-1">
-                                    <button onclick="country()" type="button"
+                                    <span>
+                                        <button onclick="country()" type="button"
                                         class="btn-select-box border-0 bg-white btn-country" id="btn-country">United
-                                        Stated</button>
-                                    <svg width="10" height="5" viewBox="0 0 10 5" fill="none"
+                                        State</button>
+                                    </span>
+                                    <span><svg width="10" height="5" viewBox="0 0 10 5" fill="none"
                                         class="fill-current qblack" xmlns="http://www.w3.org/2000/svg">
                                         <rect x="9.18359" y="0.90918" width="5.78538" height="1.28564"
                                             transform="rotate(135 9.18359 0.90918)"></rect>
                                         <rect x="5.08984" y="5" width="5.78538" height="1.28564"
                                             transform="rotate(-135 5.08984 5)"></rect>
-                                    </svg>
+                                    </svg></span>
                                     <div class="list-country list d-none">
                                         <ul class="list-group">
                                             <li class="list-group-item border-bottom-0">United Stated</li>
@@ -55,15 +57,17 @@
                             </div>
                             <div class="select-wrapper align-items-center d-flex">
                                 <div class="select-box" style="margin-left: 24px;">
-                                    <button onclick="money()" type="button"
+                                    <span>
+                                        <button onclick="money()" type="button"
                                         class="btn-select-box border-0 bg-white btn-money" id="btn-money">USD</button>
-                                    <svg width="10" height="5" viewBox="0 0 10 5" fill="none"
-                                        class="fill-current qblack" xmlns="http://www.w3.org/2000/svg">
-                                        <rect x="9.18359" y="0.90918" width="5.78538" height="1.28564"
-                                            transform="rotate(135 9.18359 0.90918)"></rect>
-                                        <rect x="5.08984" y="5" width="5.78538" height="1.28564"
-                                            transform="rotate(-135 5.08984 5)"></rect>
-                                    </svg>
+                                    </span>
+                                   <span> <svg width="10" height="5" viewBox="0 0 10 5" fill="none"
+                                    class="fill-current qblack" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="9.18359" y="0.90918" width="5.78538" height="1.28564"
+                                        transform="rotate(135 9.18359 0.90918)"></rect>
+                                    <rect x="5.08984" y="5" width="5.78538" height="1.28564"
+                                        transform="rotate(-135 5.08984 5)"></rect>
+                                </svg></span>
                                     <div class="list-money list d-none">
                                         <ul class="list-group ">
                                             <li class="list-group-item border-bottom-0">USD</li>
@@ -75,16 +79,16 @@
                             </div>
                             <div class="select-wrapper align-items-center d-flex">
                                 <div class="select-box" style="margin-left: 24px;">
-                                    <button onclick="language()" type="button"
+                                    <span><button onclick="language()" type="button"
                                         class="btn-select-box border-0 bg-white btn-language"
-                                        id="btn-language">Bangla</button>
-                                    <svg width="10" height="5" viewBox="0 0 10 5" fill="none"
+                                        id="btn-language">Bangla</button></span>
+                                    <span><svg width="10" height="5" viewBox="0 0 10 5" fill="none"
                                         class="fill-current qblack" xmlns="http://www.w3.org/2000/svg">
                                         <rect x="9.18359" y="0.90918" width="5.78538" height="1.28564"
                                             transform="rotate(135 9.18359 0.90918)"></rect>
                                         <rect x="5.08984" y="5" width="5.78538" height="1.28564"
                                             transform="rotate(-135 5.08984 5)"></rect>
-                                    </svg>
+                                    </svg></span>
                                     <div class="list-language list d-none">
                                         <ul class="list-group ">
                                             <li class="list-group-item border-bottom-0 ">Bangla</li>
@@ -319,11 +323,11 @@
                 </div>
             </div>
             <!-- navigation -->
-            <div class="w-full bg-white">
-                <div class="navigation w-full h-full">
-                    <div class="container-content mx-auto h-full font-500" style="padding-top: 6px;height: 60px;">
-                        <div class="h-full d-flex">
-                            <div class="menu-categories no-padding d-flex align-items-center ">
+            <div class="bg-white">
+                <div class="navigation h-full ">
+                    <div class="container-content mx-auto h-full font-500" style="height: 60px;">
+                        <div class="h-full d-flex no-padding w-full position-relative">
+                            <div class="menu-categories no-padding d-flex align-items-center " >
                                 <div class="d-flex w-full align-items-center justify-content-between p-20">
                                     <div class="d-flex align-items-center">
                                         <span>
@@ -803,15 +807,20 @@
                                         </a>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="menu-navigation d-flex justify-content-center  mx-2 ">
+                            </div >
+                            <div class="menu-navigation no-padding h-full d-flex justify-content-center  mx-2 ">
                                 <nav class="navbar navbar-expand-lg text-white font-600 ">
                                     <div class="container-fluid">
                                         <div class="collapse navbar-collapse" id="navbarNav">
                                             <ul
                                                 class="navbar-nav d-flex align-items-center justify-content-center h-full no-padding m-0">
                                                 <li class="nav-item">
-                                                    <a class="nav-link item1" aria-current="page" href="#">Homepage <svg
+                                                    <a class="nav-link item1" aria-current="page" href="#">
+                                                        <span>
+                                                            Homepage
+                                                        </span> 
+                                                        <span>
+                                                            <svg
                                                             width="10" height="5" viewBox="0 0 10 5" fill="none"
                                                             class="fill-current qblack"
                                                             xmlns="http://www.w3.org/2000/svg">
@@ -821,6 +830,7 @@
                                                             <rect x="5.08984" y="5" width="5.78538" height="1.28564"
                                                                 transform="rotate(-135 5.08984 5)"></rect>
                                                         </svg>
+                                                        </span>
                                                         <div class="list-menu-homepage">
                                                             <div class="item-menu" style="color: #ffbb38;
                                                     text-decoration: underline;">Home One</div>
@@ -832,7 +842,12 @@
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link item2" href="#">Shop <svg width="10" height="5"
+                                                    <a class="nav-link item2" href="#">
+                                                        <span>
+                                                            Shop
+                                                        </span>
+                                                       <span>
+                                                            <svg width="10" height="5"
                                                             viewBox="0 0 10 5" fill="none" class="fill-current qblack"
                                                             xmlns="http://www.w3.org/2000/svg">
                                                             <rect x="9.18359" y="0.90918" width="5.78538"
@@ -840,7 +855,8 @@
                                                                 transform="rotate(135 9.18359 0.90918)"></rect>
                                                             <rect x="5.08984" y="5" width="5.78538" height="1.28564"
                                                                 transform="rotate(-135 5.08984 5)"></rect>
-                                                        </svg>
+                                                            </svg>
+                                                       </span>
                                                         <div class="list-shop h-full w-full">
                                                             <div
                                                                 class="row item-list-shop d-flex justify-content-center  h-full">
@@ -877,7 +893,12 @@
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link item3" href="#">Pages <svg width="10" height="5"
+                                                    <a class="nav-link item3" href="#">
+                                                        <span>
+                                                            Pages
+                                                        </span>
+                                                        <span>
+                                                            <svg width="10" height="5"
                                                             viewBox="0 0 10 5" fill="none" class="fill-current qblack"
                                                             xmlns="http://www.w3.org/2000/svg">
                                                             <rect x="9.18359" y="0.90918" width="5.78538"
@@ -886,6 +907,7 @@
                                                             <rect x="5.08984" y="5" width="5.78538" height="1.28564"
                                                                 transform="rotate(-135 5.08984 5)"></rect>
                                                         </svg>
+                                                        </span>
                                                         <div class="list-menu-page">
                                                             <div class="item-menu">Privacy Policy</div>
                                                             <div class="item-menu">Terms and Conditions</div>
@@ -909,7 +931,7 @@
                                     </div>
                                 </nav>
                             </div>
-                            <div class="become-a-seller d-flex align-items-center justify-content-end">
+                            <div class="become-a-seller d-flex align-items-center justify-content-end ">
                                 <button type="button" class="btn-become-a-seller font-600 border-0">Become a
                                     Seller</button>
                             </div>

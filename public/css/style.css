@@ -63,7 +63,13 @@ li {
 .select-wrapper {
     position: relative;
 }
-
+.select-box{
+    display: flex;
+    align-items: center;
+} 
+.select-box span{
+    padding-right: 3px;
+}
 .select-box .list-country {
     position: absolute;
     right: 170px !important;
@@ -364,14 +370,14 @@ a {
 
 .navigation .container-content .menu-categories {
     height: 53px;
-    padding: 0 10px;
-    padding-left: 10px;
     width: 270px;
     position: relative;
     background-color: #fff;
     border-top-left-radius: 0.375rem;
     border-top-right-radius: 0.375rem;
     cursor: pointer;
+    top: 6px;
+    margin-left: 28px;
 }
 
 .navigation .container-content .menu-categories .dropdown-categories {
@@ -402,30 +408,35 @@ a {
 
 }
 .menu-navigation {
-    height: 53px;
     width: auto;
+    height: 60px;
 }
 
 .menu-navigation .nav-link {
-    padding-left: 28px !important;
+    padding-left: 24px !important;
     color: #fff !important;
     font-size: .875rem;
     line-height: 1.25rem;
     padding: 19px;
     margin: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
 }
-
+.menu-navigation .nav-link span{
+    padding-right: 3px;
+}
+.navigation .become-a-seller{
+    position: absolute;
+    display: flex;
+    right: 0;
+    top: 10px;
+}
 .navigation .become-a-seller .btn-become-a-seller {
     color: #000;
     background-color: #ffbb38;
     width: 161px;
     height: 40px;
-    margin-left: 190px;
-}
-
-.menu-navigation .nav-link {
-    position: relative;
-    display: inline-block;
 }
 
 .menu-navigation .list-menu-homepage {
@@ -438,7 +449,7 @@ a {
     width: 210px;
     padding: 10px;
     height: 192px;
-    top: 57px;
+    top:59px;
     right: -115px;
     z-index: 999;
     flex-direction: column;
@@ -468,7 +479,7 @@ a {
     position: absolute;
     padding: 30px;
     display: none;
-    top: 57px;
+    top:59px;
     left: -400px;
     z-index: 9999;
     box-shadow: rgba(0, 0, 0, 0.14) 0px 15px 50px 0px;
@@ -524,7 +535,7 @@ a {
     padding: 10px;
     display: none;
     height: 192px;
-    top: 57px;
+    top:59px;
     right: -140px;
     z-index: 999;
     flex-direction: column;
