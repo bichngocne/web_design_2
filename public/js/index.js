@@ -94,19 +94,19 @@ var x = setInterval(function () {
   <div class="group-item text-center d-flex ">
       <div class="item-category-market d-inline-block">
           <div class="days date">${days}</div>
-          <div class="content-item text-base text-18">Days</div>
+          <div class="content-item text-base text-18 sm-text-12">Days</div>
       </div>
       <div class="item-category-market d-inline-block ml-3">
           <div class="hours date">${hours}</div>
-          <div class="content-item text-base text-18">Hour</div>
+          <div class="content-item text-base text-18 sm-text-12">Hour</div>
       </div>
       <div class="item-category-market d-inline-block ml-3">
           <div class="minutes date">${minutes}</div>
-          <div class="content-item text-base text-18">Minutes</div>
+          <div class="content-item text-base text-18 sm-text-12">Minutes</div>
       </div>
       <div class="item-category-market d-inline-block ml-3">
           <div class="seconds date">${seconds}</div>
-          <div class="content-item text-base text-18">Seconds</div>
+          <div class="content-item text-base text-18 sm-text-12">Seconds</div>
       </div>
   </div>
 `;
@@ -131,19 +131,60 @@ document.addEventListener("DOMContentLoaded", () => {
     inputEmail.classList.remove("active");
     iconEmail.classList.remove("active");
   });
+  // main menu
+  
+  const mainMenu = document.querySelector('.main-menu');
+  const mainMenuScreen = document.querySelector('.main-menu-screen');
+  const close = document.querySelector('.btn-close-mainmenu');
+  const open = document.querySelector('.open-menu');
+  let isOpen = false;
+  open.addEventListener("click", () => {
+    if (!isOpen) {
+      mainMenuScreen.classList.add('bg-opacity-40', 'w-full', 'h-screen', 'z-3', 'fixed-top');
+      mainMenu.style.left = "0";
+      isOpen = true;
+    } else {
+      mainMenu.style.left = "-280px";
+      isOpen = false;
+    }
+  });
+  document.addEventListener('click', function(event) {
+    var isClickInside = mainMenu.contains(event.target) || open.contains(event.target);
+    if (!isClickInside) {
+      mainMenu.style.left = "-280px";
+      mainMenuScreen.classList.remove('bg-opacity-40', 'w-full', 'h-screen', 'z-3', 'fixed-top');
+      isOpen = false;
+    }
+});
+  close.addEventListener("click", () => {
+    mainMenu.style.left = "-280px";
+    mainMenuScreen.classList.remove('bg-opacity-40', 'w-full', 'h-screen', 'z-3', 'fixed-top');
+    isOpen = false;
+  });
+ 
+  
+  
+ 
 });
 
 function navCate() {
   const menuCategories = document.querySelector(".menu-categories");
   const dropdownCategories = document.querySelector(".dropdown-categories");
-
+  let isOpen = false;
   menuCategories.addEventListener("click", () => {
-    dropdownCategories.classList.toggle("d-block");
+    if (!isOpen) {
+      dropdownCategories.style.height = "400px";
+      isOpen = true;
+    } else {
+      dropdownCategories.style.height = "0";
+      isOpen = false;
+    }
   });
 
   document.addEventListener("click", (event) => {
     if (!menuCategories.contains(event.target)) {
-      dropdownCategories.classList.remove("d-block");
+      dropdownCategories.style.height = "0";
+      isOpen = false;
     }
   });
 }

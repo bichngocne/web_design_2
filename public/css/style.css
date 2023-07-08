@@ -36,10 +36,6 @@ li {
     padding: 0;
 }
 
-.container-fluid {
-    padding: 0 !important;
-}
-
 .container-content {
     
     padding: 0 24px;
@@ -49,12 +45,20 @@ li {
 .content-wrapper.container-content {
     height: unset !important;
 }
-
+/* main menu*/
+.main-menu{
+    z-index: 9999999999999999999;
+    display: none;
+}
+/* top-heaer */
 .top-header {
     height: 40px;
     border: 1px solid #e5e7eb;
 }
-
+.content-right{
+    display: flex;
+    justify-content: end;
+}
 .fill-current {
     fill: currentColor;
 }
@@ -78,6 +82,7 @@ li {
 .select-box .list {
     position: absolute;
     right: 130px;
+    top:20px;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
@@ -91,6 +96,7 @@ li {
     width: 150px;
     height: 120px;
     position: absolute;
+    z-index: 999999999999;
 }
 
 .select-box .list-country .list-country .list-group-item {
@@ -103,14 +109,14 @@ li {
     position: absolute;
     width: 120px;
     height: 80px;
-    z-index: 999;
+    z-index: 99999999;
 }
 
 .select-box .list-language .list-group {
     position: absolute;
     width: 120px;
     height: 80px;
-    z-index: 999;
+    z-index: 9999999;
 }
 
 
@@ -126,11 +132,16 @@ li {
 .content-logo-introduction {
     height: 86px;
 }
-
+.menu{
+    display: none;
+}
 img {
     height: auto;
 }
-
+.search{
+    display: flex;
+    align-items: center;
+}
 .container-content .search .input-group {
     border: 1px solid #e5e7eb;
 }
@@ -385,9 +396,7 @@ a {
     top: 53px;
     left: 0;
     width: 270px;
-    height: 400px;
     z-index: 99999;
-    display: none;
     overflow: hidden;
     transition: all .5s ease-in-out;
 }
@@ -446,11 +455,11 @@ a {
     line-height: 1.25rem;
     background-color: #fff;
     display: none;
-    width: 210px;
+    width: 209px;
     padding: 10px;
     height: 192px;
     top:59px;
-    right: -115px;
+    right: -110px;
     z-index: 999;
     flex-direction: column;
     box-shadow: rgba(0, 0, 0, 0.14) 0px 15px 50px 0px;
@@ -480,8 +489,8 @@ a {
     padding: 30px;
     display: none;
     top:59px;
-    left: -400px;
-    z-index: 9999;
+    left: -410px;
+    z-index: 9999999;
     box-shadow: rgba(0, 0, 0, 0.14) 0px 15px 50px 0px;
     animation: fade-in .4s ease-in;
 }
@@ -531,12 +540,12 @@ a {
     font-size: .875rem;
     line-height: 1.25rem;
     background-color: #fff;
-    width: 200px;
+    width: 195px;
     padding: 10px;
     display: none;
     height: 192px;
     top:59px;
-    right: -140px;
+    right: -130px;
     z-index: 999;
     flex-direction: column;
     box-shadow: rgba(0, 0, 0, 0.14) 0px 15px 50px 0px;
@@ -557,9 +566,18 @@ a {
 }
 
 /* banner */
+.banner{
+    display: flex;
+}
 .container-content .banner {
     padding-top: 30px;
     padding-bottom: 60px;
+}
+.img-banner-left{
+    width: unset !important;
+}
+.img-banner-right{
+    margin-left: 30px;
 }
 
 /* content 1 */
@@ -629,9 +647,12 @@ a {
 .mb-60 {
     margin-bottom: 90px;
 }
+.grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 
+}
 .list-product-content-2 .item-product-content-2 {
-    width: 363px;
+    /* width: 363px; */
     height: 450px;
     padding: 0;
     position: relative;
@@ -652,12 +673,9 @@ a {
 }
 
 .list-product-content-2 .item-product-content-2 .wrapper-product:hover .hover-product-item .list-icon-hover {
-    animation: rightPr .4s ease-out;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
 }
 
-.list-product-content-2 .item-product-content-2 .wrapper-product:not(:hover) .hover-product-item .list-icon-hover {
-    animation: leftPr .4s ease-out;
-}
 
 @keyframes rightPr {
 
@@ -890,9 +908,7 @@ a {
 }
 
 .container-content .content-5  .item-content-5-product {
-    padding: 16px;
-    width: 569px;
-    height: 250px;
+    padding: 20px;
     position: relative;
 }
 
@@ -918,7 +934,6 @@ a {
 
 .container-content  .item-content-5-product .hover-product-item {
     display: none;
-
 }
 
 .container-content  .item-content-5-product .hover-product-item .icon-item-product-hover {
@@ -943,8 +958,8 @@ a {
 }
 .container-content .content-7 .item-content-5-product {
     padding: 20px;
-    width: 370px;
     height: 105px;
+    border-top: solid 0.8px #eef1f1;
 }
 .text-15{
     font-size: 15px ;
@@ -1032,10 +1047,7 @@ img, object, svg, video {
     vertical-align: middle;
 }
 /* footer */
-.h-389{
-    height: calc(398px + 83px);
-    padding-top: 83px ;
-}
+
 .mb-14 {
     margin-bottom: 2.5rem;
 }
@@ -1091,4 +1103,10 @@ ol, ul {
 }
 .wrapper-footer .column{
     width: 292px;
+}
+.wrapper-footer{
+    display: flex;
+}
+.bottom-bar{
+    display: flex;
 }
