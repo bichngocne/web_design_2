@@ -162,7 +162,23 @@ document.addEventListener("DOMContentLoaded", () => {
     isOpen = false;
   });
  
-  
+  const wrapperMenu1= document.querySelector('.wrapper-1');
+  const wrapperMenu2= document.querySelector('.wrapper-2');
+  const btnMainMenu = document.querySelector('.btn-main-menu');
+  const btnCategory = document.querySelector('.btn-categories');
+
+  btnMainMenu.addEventListener('click',()=>{
+    btnMainMenu.style.color = '#000';
+    btnCategory.style.color = '#797676';
+    wrapperMenu2.style.display = 'block';
+    wrapperMenu1.style.display = 'none';
+  })
+  btnCategory.addEventListener('click',()=>{
+    btnMainMenu.style.color = '#797676';
+    btnCategory.style.color = '#000';
+    wrapperMenu2.style.display = 'none';
+    wrapperMenu1.style.display = 'block';
+  })
   
  
 });
