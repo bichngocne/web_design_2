@@ -56,7 +56,7 @@
 @media (max-width: 992px) {
     /* main menu */
     .menu{
-        display: flex;
+        display: flex !important;
     }
     .bg-opacity-40 {
         --tw-bg-opacity: .4;
