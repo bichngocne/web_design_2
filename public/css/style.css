@@ -51,6 +51,10 @@ li {
 .content-wrapper.container-content {
     height: unset !important;
 }
+.xl\:text-3xl{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+}
 /* main menu*/
 .main-menu{
     z-index: 9999999999999999999;
@@ -89,20 +93,20 @@ li {
     position: absolute;
     right: 130px;
     top:20px;
+    transition: all .2s cubic-bezier(.5,0,0,1.25),opacity .15s ease-out;
+ 
+}
+
+.opacity-0{
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
 }
-
-.select-box:hover .list {
-    opacity: 1;
-}
-
-
 .select-box .list-country .list-group {
     width: 150px;
     height: 120px;
     position: absolute;
     z-index: 999999999999;
+    
+
 }
 
 .select-box .list-country .list-country .list-group-item {
@@ -208,7 +212,7 @@ img {
 .notification .badge {
     position: absolute;
     font-size: 9px;
-    top: 11px;
+    top: 9px;
     right: 1px;
     border-radius: 50%;
     background: #2d6f6d;
@@ -256,9 +260,6 @@ img {
     height: 105px;
 }
 
-.product-list-wrapper .product-list .product-item {
-    padding: 10px;
-}
 
 .product-list-wrapper .product-list .product-item .product-name {
     color: #000000ad;
@@ -592,9 +593,6 @@ a {
     line-height: 2.25rem;
 }
 
-.container-content .content-1 {
-    height: 390px;
-}
 
 .text-base {
     font-size: 1rem;
@@ -658,31 +656,28 @@ a {
 
 }
 .list-product-content-2 .item-product-content-2 {
-    /* width: 363px; */
-    height: 450px;
-    padding: 0;
     position: relative;
 }
 
 .list-product-content-2 .item-product-content-2 .hover-product-item {
-    position: absolute;
+    /* position: absolute; */
     z-index: 999;
     top: 0;
     left: 0;
-    width: 363px;
-    height: 450px;
+    /* width: 363px; */
+    /* height: 450px; */
 }
 
 
 .list-product-content-2 .item-product-content-2 .wrapper-product:hover .hover-product-item .list-icon-hover {
-    right: 50px;
+    right: 15%;
     opacity: 1;
 }
 
 .list-product-content-2 .item-product-content-2 .hover-product-item .list-icon-hover {
     position: absolute;
     opacity: 0;
-    top: 5rem;
+    top: 20%;
     right: -20px;
     transition-timing-function: cubic-bezier(.4,0,.2,1);
     transition-duration: .3s;
@@ -696,15 +691,15 @@ a {
 }
 
 .list-product-content-2 .item-product-content-2 .wrapper-product:hover .add-to-cart {
-    bottom: 70px;
+    bottom: 12%;
     opacity: 1;
 }
 
 .list-product-content-2 .item-product-content-2 .hover-product-item .add-to-cart {
     position: absolute;
-    bottom: 0px;
-    left: calc(100% - 280px);
     opacity: 0;
+    bottom: 0%;
+    width: 100%;
     transition-timing-function: cubic-bezier(.4,0,.2,1);
     transition-duration: .3s;
     transition-property: all;
@@ -712,10 +707,10 @@ a {
 
 .btn-add-to-cart {
     background-color: #2d6f6b;
-    width: 204px;
-    height: 54px;
     font-size: 13px;
     border: 0;
+    margin: auto auto;
+    padding: 4% 14%;
 }
 
 .w-40 {
@@ -727,8 +722,6 @@ a {
 }
 
 .list-product-content-2 .item-product-content-2 .img-product {
-   height: 322px;
-    margin: 20px 0;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -765,7 +758,12 @@ a {
 .py-40 {
     margin: 40px 0;
 }
-
+.img-product{
+    padding: 20px;
+}
+.compaire .img-product{
+    padding: 0 ;
+}
 /* content 3 */
 .container-content .content-3 {
     width: 100%;
@@ -843,9 +841,11 @@ a {
 
 .content-3 .countdown-title .main-title {
     font-size: 44px;
-    height: 64px;
     --tw-text-opacity: 1;
     color: rgb(34 34 34/var(--tw-text-opacity));
+}
+.price{
+    padding-bottom: 10px;
 }
 
 .content-3 .countdown-title .shop-now .btn-shop-now {
@@ -865,8 +865,10 @@ a {
 }
 
 .container-content  .item-content-5-product .btn-add-to-cart {
-    width: 116px;
-    height: 40px;
+    margin: 0;
+}
+.img-product-content-5{
+    width: 33.333333%;
 }
 .title-product:hover{
     --tw-text-opacity: 1;
@@ -912,7 +914,6 @@ a {
 }
 .container-content .content-7 .item-content-5-product {
     padding: 20px;
-    height: 105px;
     border-top: solid 0.8px #eef1f1;
 }
 .text-15{
@@ -999,6 +1000,18 @@ a {
 img, object, svg, video {
     display: block;
     vertical-align: middle;
+}
+img{
+    object-fit: contain;
+}
+.content-7 .img-product-content-5{
+    width: 75px;
+}
+.title-product.text-15.font-600 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 200px;
 }
 /* footer */
 
