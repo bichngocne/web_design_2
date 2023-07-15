@@ -252,7 +252,9 @@
         width: 37vw;
         height: 32vw;
     }
-
+    .btn-add-to-cart {
+        margin: 0;
+    }
     /* footer */
     .sm\:text-xl {
         font-size: 1.25rem;
