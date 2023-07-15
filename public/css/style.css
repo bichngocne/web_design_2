@@ -705,13 +705,7 @@ a {
     transition-property: all;
 }
 
-.btn-add-to-cart {
-    background-color: #2d6f6b;
-    font-size: 13px;
-    border: 0;
-    margin: auto auto;
-    padding: 4% 14%;
-}
+
 
 .w-40 {
     width: 40px;
@@ -1076,4 +1070,11 @@ ol, ul {
 }
 .bottom-bar{
     display: flex;
+}
+.btn-add-to-cart {
+    background-color: #2d6f6b;
+    font-size: 13px;
+    border: 0;
+    margin: auto auto;
+    padding: 4% 14%;
 }
